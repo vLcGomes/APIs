@@ -7,14 +7,16 @@
   <title>Cadastro Usuário</title>
 </head>
 <body>
-  <form id='register-form' action="submit" method="POST">
-    <Label>Name</Label>
+  <h1>CADASTRO DE USUÁRIO</h1>
+  <form id='register-form' method="POST">
+    <Label for='name'>Name</Label>
     <input type="text" name="name" id="name">
-    <Label>E-mail</Label>
+    <Label for="email">E-mail</Label>
     <input type="email" name="email" id="email">
-    <Label>Password</Label>
+    <Label for="password">Password</Label>
     <input type="password" name="password" id="password">
-    <button>SUBMIT</button>
+    <button type="submit">SUBMIT</button>
   </form>
+  <script src="./script.js"></script>
 </body>
 </html>

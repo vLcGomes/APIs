@@ -32,3 +32,8 @@ button {
   border-radius: 20px;
   background-color: #66dd41
 }
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
