@@ -12,6 +12,10 @@ function EmptyField() {
   alert("Preencha todos os campos!")
 }
 
+function duplicatedEmail(error) {
+  return alert('Username ou Email já cadastrados!.')
+}
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault()
   
@@ -23,5 +27,17 @@ form.addEventListener('submit', async (e) => {
   
   if (!allFieldFill) {
     EmptyField()
+    return
   }
+  try {
+    await fetch('http://localhost:3030/api', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ usernameValue, emailValue, passwordValue})
+    })
+    alert('Usuário salvo com sucesso!')
+  } catch (e) {
+    duplicatedEmail(e)
+  }
+
 })
