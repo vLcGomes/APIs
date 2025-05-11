@@ -42,8 +42,11 @@ body {
 #register-news {
   padding: 10px;
   background: #eee;
+  color: #000;
+  border: 2px solid #000;
   font-weight: bold;
   border-radius: 5px;
+  text-decoration: none
 }
 
 #register-news:hover {
@@ -70,6 +73,7 @@ body {
 
 .news-text {
   height: 150px;
+  overflow: hidden;
 }
 
 .date {
