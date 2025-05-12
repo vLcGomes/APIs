@@ -8,7 +8,7 @@ const db = new sqlite3.Database('./db.sqlite')
 
 function saveUser(usernameValue, emailValue, passwordValue) {
   db.serialize(() => {
-    db.run('CREATE TABLE IF NOT EXISTS teste(username TEXT, email TEXT UNIQUE, password TEXT)')
+    db.run('CREATE TABLE IF NOT EXISTS teste (username TEXT, email TEXT UNIQUE, password TEXT)')
   
     db.run("INSERT INTO teste (username, email, password) VALUES (?, ?, ?)", [usernameValue, emailValue, passwordValue])
   })
