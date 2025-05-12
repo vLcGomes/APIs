@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node public/API/server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.7"
   }
 }

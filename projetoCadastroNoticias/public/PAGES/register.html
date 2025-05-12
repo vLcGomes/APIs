@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registre sua Notícia</title>
+  <link rel="stylesheet" href="../CSS/register.css">
+</head>
+<body>
+  <main>
+    <form id='register-form'>
+      <h1 class="title-form">REGISTER NEWS</h1>
+      <label for="title">Title</label>
+      <input type="text" name="title" id='register-title'>
+      <label for="content">Text</label>
+      <textarea name="content" id="content"></textarea>
+      <label for="category">Select a Category:</label>
+      <select name="category" id="category">
+        <option value="teste">Tecnologia</option>
+        <option value="teste1">Esportes</option>
+        <option value="teste2">Cultura</option>
+        <option value="teste2">História</option>
+        <option value="teste2">Geral</option>
+        <option value="teste2">Games</option>
+      </select>
+      <input id='register-button' type="submit" value="Registrar">
+      <button id='back-home' class='register-button'>HOME</button>
+    </form>
+  </main>
+  <script src="../JS/script-register.js"></script>
+</body>
+</html>
