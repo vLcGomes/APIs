@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.background-img {
+  background-image: url('/imgs/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 100px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 700px;
+}
+
+.home-text-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  height: auto;
+  padding: 40px;
+  font-family: sans-serif;
+}
+
+.collection-title {
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.collection-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #777;
+  line-height: 24px;
+  letter-spacing: 0.04rem;
+}
