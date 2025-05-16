@@ -1,0 +1,68 @@
+.footer-default-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  padding: 25px;
+}
+
+.footer-pages-options li, .footer-shop-options li {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.footer-fisical-address li {
+  list-style: none;
+}
+
+.footer-fisical-address a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-fisical-address li:first-child {
+  margin-bottom: 20px;
+}
+
+.footer-pages-options a, .footer-shop-options a {
+  text-decoration: none;
+  color: #000;
+  padding: 15px 0;
+}
+
+
+
+.footer-main-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 25px;
+}
+
+.footer-pages-options, .footer-shop-options, .footer-fisical-address  {
+  min-width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-pages-options a:hover, .footer-shop-options a:hover {
+  text-decoration: underline;
+}
+
+.footer-shop-infos {
+  display: flex;
+  width: 100%;
+  margin: 40px 25px;
+}
+
+.footer-shop-infos p {
+  width: 50%;
+}
+
+.footer-shop-infos i {
+  padding-right: 5px;
+}
