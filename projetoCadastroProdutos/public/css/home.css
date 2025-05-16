@@ -11,7 +11,7 @@ body {
   flex-direction: column;
 }
 
-.background-img {
+.background-home-img {
   background-image: url('/imgs/background.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,11 +26,12 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   height: auto;
-  padding: 40px;
+  padding: 50px;
   font-family: sans-serif;
 }
 
 .collection-title {
+  font-size: 32px;
   font-weight: normal;
   margin-bottom: 15px;
 }
@@ -41,4 +42,74 @@ body {
   color: #777;
   line-height: 24px;
   letter-spacing: 0.04rem;
+  margin-bottom: 15px;
+}
+
+.home-collection-items-display {
+  display: flex;
+  gap: 10px;
+}
+
+.home-collection-item {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  margin: 30px 0;
+  width: 25%;
+}
+
+.home-collection-item-image {
+  background-image: url('/imgs/collection-umbro-1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85%;
+  width: 100%;
+}
+
+.home-collection-item-title {
+  max-width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.home-collection-item-title a {
+  text-decoration: none;
+  color: #777;
+}
+
+.home-collection-item-title a:hover {
+  text-decoration: underline;
+}
+
+.home-collection-item-price {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.home-collection-item-sizes {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.home-button-all-items {
+  max-width: 1440px;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.home-button-collection-all-items {
+  width: 150px;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  margin: 0 auto;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
 }
