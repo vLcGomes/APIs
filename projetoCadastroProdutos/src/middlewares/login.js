@@ -1,4 +1,0 @@
-const validateFields = (req, res) => {
-
-  
-}

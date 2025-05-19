@@ -14,12 +14,12 @@
 </head>
 <body>
   <%- include('partials/header') %>
-  <form id="register-form" class="register-form" action="/register" method=post>
+  <form id="register-form" class="register-form" action="/register" method="POST">
     <h1 id="register-title" class="resgister-title">Criar uma conta</h1>
-    <input type="text" id="nome" class="nome" placeholder="Nome">
-    <input type="text" placeholder="Sobrenome" id="sobrenome" class="sobrenome">
-    <input type="email" placeholder="E-mail" id="email" class="email">
-    <input type="password" placeholder="Senha" id="senha" class="senha">
+    <input type="text" id="nome" class="nome" placeholder="Nome" name="nome">
+    <input type="text" placeholder="Sobrenome" id="sobrenome" class="sobrenome" name="sobrenome">
+    <input type="email" placeholder="E-mail" id="email" class="email" name="email">
+    <input type="password" placeholder="Senha" id="senha" class="senha" name="senha">
     <input id="register-submit-button" class="register-submit-button" type="submit" value="CRIAR CONTA">
 
     <p id="register-terms" class="register-terms">Ao criar uma conta você aceita nossos Termos e Política de Privacidade.</p>

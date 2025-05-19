@@ -12,8 +12,7 @@ db.serialize(() => {
     senha TEXT NOT NULL)`)
 })
 
-function insertData() {
-
-}
 
 db.close()
+
+module.exports = db
