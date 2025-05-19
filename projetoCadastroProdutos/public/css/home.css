@@ -99,7 +99,8 @@ body {
   max-width: 1440px;
   height: auto;
   margin: 0 auto;
-  padding: 50px 0;
+  padding-top: 20px;
+  padding-bottom: 70px;
   text-align: center;
 }
 

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/login.css">
+
+  <script src="https://kit.fontawesome.com/813d899eeb.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+  <%- include('partials/header') %>
+  <form id="login-form" class="login-form" action="post">
+    <h1 id="login-title" class="login-title">Login</h1>
+    <input id="email" type="text" placeholder="E-mail">
+    <input id="password" type="password" placeholder="Senha">
+    <a id="account-recover" class="account-recover" href="/login/recover">Esqueceu a senha?</a>
+    <input id="enter-button" class="enter-button" type="submit" value="Entrar">
+    <a id="new-account" class="new-account" href="/register">Criar uma conta</a>
+  </form>
+  <%- include('partials/footer') %>
+</body>
+</html>
