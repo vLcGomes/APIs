@@ -55,12 +55,16 @@
   color: #000;
 }
 
-.user-menu li {
+.user-menu li{
   list-style: none;
   padding: 10px 15px;
   color: #000;
   font-size: 20px;
   transition: 0.3s
+}
+
+.user-menu li i  {
+  color: #000;
 }
 
 .user-menu li:hover {
