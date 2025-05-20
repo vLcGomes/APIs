@@ -3,16 +3,18 @@ const path = require('path')
 
 const db = new sqlite3.Database(path.join(__dirname, '../..', 'db.sqlite3'))
 
-db.serialize(() => {
-  db.run(`CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nome TEXT NOT NULL,
-    sobrenome TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL,
-    senha TEXT NOT NULL)`)
-})
+function createTableUsers() {
+  db.serialize(() => {
+    db.run(`CREATE TABLE IF NOT EXISTS users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      nome TEXT NOT NULL,
+      sobrenome TEXT NOT NULL,
+      email TEXT UNIQUE NOT NULL,
+      senha TEXT NOT NULL)`)
+  })
+}
 
+createTableUsers()
 
-db.close()
 
 module.exports = db
