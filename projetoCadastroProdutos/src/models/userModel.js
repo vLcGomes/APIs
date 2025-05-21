@@ -16,7 +16,7 @@ const deleteUser = (req, res, next) => {
   next()
 }
 
-const UpdateUser = (req, res, next) => {
+const updateUser = (req, res, next) => {
   const query = `UPDATE users SET name = (?), sobrenome = (?), email = (?)`
 
   const { nome, sobrenome, email} = req.body
@@ -40,4 +40,7 @@ const showUser = (req, res, next) => {
 
 module.exports = {
   saveUser,
+  deleteUser,
+  updateUser,
+  showUser
 }
