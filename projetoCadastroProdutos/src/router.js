@@ -1,8 +1,10 @@
 const express = require('express')
 const router = express.Router()
-const validateFields = require('./middlewares/validateFields')
-const userModel = require('./models/userModel')
 const session = require('express-session')
+
+const validateFields = require('./middlewares/validateFields')
+const validateCredentails = require('./middlewares/validateCredentials')
+const userModel = require('./models/userModel')
 
 router.get('/home', (req, res) => {
   res.status(200).render('index')
@@ -12,10 +14,7 @@ router.get('/login', (req, res) => {
   res.status(200).render('login')
 })
 
-router.post('/login', (req, res) => {
-
-  res.render('home')
-})
+router.post('/login', validateCredentails.loginUser)
 
 router.get('/login/recover', (req, res) => {
 
