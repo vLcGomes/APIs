@@ -30,12 +30,11 @@ router.get('/register', (req, res) => {
 })
 
 
-router.get('/produto', (req, res) => res.status(200).render('produto'))
-router.post('/produto', productModel.saveProduct, (req, res) => res.json({ mensagem: 'Produto Cadastrado!'}))
+router.get('/product', (req, res) => res.status(200).render('product'))
+router.post('/product', productModel.saveProduct, (req, res) => res.json({ mensagem: 'Produto Cadastrado!'}))
 
 router.post('/register', 
   validateFields.emptyOrNot,
-  // SE retornar 200 rederizo '''isso''', senao renderizo ""isso"" usar redirect e criar uma página para capos invalidos
   userModel.saveUser,
   (req, res) => {
     res.render('login')

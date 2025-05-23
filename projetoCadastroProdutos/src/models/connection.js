@@ -20,7 +20,7 @@ function createTableProducts() {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
       linkImage TEXT NOT NULL,
-      priceCents INTEGER,
+      priceCents INTEGER
       )`)
   })
 }
