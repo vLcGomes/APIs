@@ -3,3 +3,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 100px;
+}
+
+.product-register {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.product-register input {
+  padding: 10px;
+  width: 250px;
+}
