@@ -14,7 +14,19 @@ function createTableUsers() {
   })
 }
 
+function createTableProducts() {
+  db.serialize(() => {
+    db.run(`CREATE TABLE IF NOT EXISTS products (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      linkImage TEXT NOT NULL,
+      priceCents INTEGER,
+      )`)
+  })
+}
+
 createTableUsers()
+createTableProducts()
 
 
 module.exports = db

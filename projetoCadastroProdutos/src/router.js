@@ -5,6 +5,7 @@ const session = require('express-session')
 const validateFields = require('./middlewares/validateFields')
 const validateCredentails = require('./middlewares/validateCredentials')
 const userModel = require('./models/userModel')
+const productModel = require('./models/productModel')
 
 router.get('/home', (req, res) => {
   res.status(200).render('index')
@@ -27,6 +28,10 @@ router.post('/login/recover', (req, res) => {
 router.get('/register', (req, res) => {
   res.status(200).render('register')
 })
+
+
+router.get('/produto', (req, res) => res.status(200).render('produto'))
+router.post('/produto', productModel.saveProduct, (req, res) => res.json({ mensagem: 'Produto Cadastrado!'}))
 
 router.post('/register', 
   validateFields.emptyOrNot,
