@@ -27,3 +27,31 @@ exports.showAllTasks = async (req, res) => {
     })
   }
 }
+
+exports.deleteTask = async (req, res) => {
+  try {
+    const tasks = getTasksCollection()
+    const deleteTask = await tasks.deleteOne({title: req.body.title})
+    res.status(200).json({
+      msg: 'Task Deletada.'
+    })
+  } catch (e) {
+    res.status(500).json({
+      msg: 'Erro no servidor!'
+    })
+  }
+}
+
+exports.updateOneInformation = async (req, res) => {
+  try {
+    const tasks = getTasksCollection()
+    const updateInformation = await tasks.updateOne({title: req.body.title}, { $set: req.body})
+    res.status(200).json({
+      msg: 'Campos atualizados'
+    })
+  } catch (e) {
+    res.status(500).json({
+      msg: 'Erro no servidor.'
+    })
+  }
+}
