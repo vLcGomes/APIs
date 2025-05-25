@@ -1,11 +1,13 @@
-const Task = require('../models/taskModel')
+
+const { getTasksCollection } = require('../config/db')
 
 exports.createNewTask = async (req, res) => {
   try {
-    const newTask = await Task.create(req.body)
+    req.body.createAt = new Date(Date.now())
+    const tasks = getTasksCollection()
+    const newTask = await tasks.insertOne(req.body)
     res.status(200).json({
-      msg: "Task adicionada!",
-      newTask
+      msg: "Task adicionada!"
     })
   } catch (e) {
     res.status(500).json({
@@ -16,7 +18,8 @@ exports.createNewTask = async (req, res) => {
 
 exports.showAllTasks = async (req, res) => {
   try {
-    const allTasks = await Task.find()
+    const tasks = getTasksCollection()
+    const allTasks = await tasks.find().toArray()
     res.status(200).json(allTasks)
   } catch (e) {
     res.status(500).json({
