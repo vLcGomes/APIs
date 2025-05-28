@@ -1,11 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
-require('dotenv').config()
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 const { connection } = require('./config/db')
 
 app.use(express.json())
-app.use('./api/users', require('./router/userRoutes.js'))
+app.use('/api/users', require('./routes/userRoutes.js'))
 
 connection().then(() => {
   app.listen(PORT, () => {

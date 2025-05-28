@@ -2,8 +2,8 @@ const { MongoClient } = require('mongodb')
 require('dotenv').config()
 
 const URL = process.env.URL
-const client = new MongoClientURL(URL)
-const dbName = 'taskManager'
+const client = new MongoClient(URL)
+const dbName = 'userManager'
 let tasks
 
 async function connection() {
@@ -11,7 +11,7 @@ async function connection() {
     await client.connect()
     console.log('Connectado')
     const db = client.db(dbName)
-    tasks = db.collection('tasks')
+    tasks = db.collection('users')
   } catch(e) {
     return e
   }
