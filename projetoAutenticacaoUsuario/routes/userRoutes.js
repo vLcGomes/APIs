@@ -8,7 +8,7 @@ router.post('/login', userControllers.loginUser)
 
 router.get('/profile', authenticateToken, (req, res) => {
   res.json({
-    msg: `Hello, ${req.user.username}`
+    msg: `Hello, ${req.body.username}`
   })
 })
 

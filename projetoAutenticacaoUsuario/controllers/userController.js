@@ -1,5 +1,7 @@
+require('dotenv').config()
 const { getTasksCollection } = require('../config/db')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
 
 exports.createUser = async (req, res) => {
   try {
@@ -27,13 +29,33 @@ exports.loginUser = async (req, res) => {
     if(!userInformations) {
       return res.status(404).json({msg: 'Usuário não encontrado!'})
     }
-    console.log(userInformations)
+
     const validPassword = await bcrypt.compare(password, userInformations[0].password)
 
     if(!validPassword) {
       return res.status(401).json({msg: 'Usuário ou senha incorretos.'})
     }
-    return res.status(200).json({msg: 'Usuário logado!'})
+
+    try {
+
+      const secret = process.env.SECRET_KEY
+
+      const token = jwt.sign({
+        id: userInformations._id
+      }, 
+      secret
+      )
+
+      return res.status(200).json({
+        msg: 'Usuário logado!', 
+        token 
+      })
+      
+    } catch (e) {
+      console.log(e)
+
+      return res.status(500).json({msg: 'Erro no Servidor!'})
+    }
   } catch (e) {
     return res.status(500).json({msg: 'Erro no Servidor!'})
   }
