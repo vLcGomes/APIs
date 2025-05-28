@@ -4,7 +4,7 @@ const userControllers = require('../controllers/userController')
 const authenticateToken = require('../middlewares/autheticateMiddleware')
 
 router.post('/register', userControllers.createUser)
-// router.post('/login')
+router.post('/login', userControllers.loginUser)
 
 router.get('/profile', authenticateToken, (req, res) => {
   res.json({
